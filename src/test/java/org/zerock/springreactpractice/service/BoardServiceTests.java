@@ -66,7 +66,7 @@ public class BoardServiceTests {
                 .bno(2L)
                 .title("제목 변경합니다.")
                 .content("내용 변경합니다.")
-                .build(); 
+                .build();
 
         boardService.modify(boardDTO);
 
