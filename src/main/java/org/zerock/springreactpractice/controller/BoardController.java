@@ -51,4 +51,28 @@ public class BoardController {
 
     }
 
+    @PutMapping(value = "/{bno}", produces = MediaType.TEXT_PLAIN_VALUE)
+    public ResponseEntity<String> modify(@RequestBody BoardDTO dto) {
+
+        log.info("-----modify-----");
+        log.info(dto);
+
+        boardService.modify(dto);
+
+        return new ResponseEntity<>("modified", HttpStatus.OK);
+
+    }
+
+    @DeleteMapping(value = "/{bno}", produces = MediaType.TEXT_PLAIN_VALUE)
+    public ResponseEntity<String> remove(@PathVariable("bno") Long bno) {
+
+        log.info("-----delete-----");
+        log.info(bno);
+
+        boardService.removeWithReplies(bno);
+
+        return new ResponseEntity<>("removed", HttpStatus.OK);
+
+    }
+
 }
