@@ -8,7 +8,6 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.transaction.annotation.Transactional;
-import org.zerock.springreactpractice.Repository.BoardRepository;
 import org.zerock.springreactpractice.entity.Board;
 import org.zerock.springreactpractice.entity.Member;
 

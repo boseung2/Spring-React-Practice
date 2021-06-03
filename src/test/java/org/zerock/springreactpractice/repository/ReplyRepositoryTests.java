@@ -3,7 +3,6 @@ package org.zerock.springreactpractice.repository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.zerock.springreactpractice.Repository.ReplyRepository;
 import org.zerock.springreactpractice.entity.Board;
 import org.zerock.springreactpractice.entity.Reply;
 

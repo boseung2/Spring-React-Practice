@@ -1,4 +1,4 @@
-package org.zerock.springreactpractice.Repository;
+package org.zerock.springreactpractice.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.zerock.springreactpractice.entity.Member;

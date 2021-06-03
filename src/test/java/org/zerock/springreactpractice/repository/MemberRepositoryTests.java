@@ -3,7 +3,6 @@ package org.zerock.springreactpractice.repository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.zerock.springreactpractice.Repository.MemberRepository;
 import org.zerock.springreactpractice.entity.Member;
 
 import java.util.stream.IntStream;
