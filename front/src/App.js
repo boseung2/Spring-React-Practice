@@ -10,7 +10,6 @@ const App = () => {
     <>
       <Route>
         <Route component={Home} path={'/'} exact />
-
         <Switch>
           <Route component={BoardRegisterPage} path={'/board/register'} />
           <Route component={BoardPage} path={'/board/:bno'} />

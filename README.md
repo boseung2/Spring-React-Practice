@@ -6,3 +6,8 @@
 * 조회 - (GET) /api/board/{bno}
 * 삭제 - (DELETE) /api/board/{bno}
 * 수정 - (PUT) /api/board/{bno}
+
+### (Frontend) Board url
+* 리스트 - /board
+* 조회 - /board/:bno
+* 등록 - /board/register
