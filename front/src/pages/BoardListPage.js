@@ -5,10 +5,10 @@ import BoardListTemplate from '../components/board/BoardListTemplate';
 const BoardListPage = () => {
 
   return (
-    <div>
+    <>
       <Header/>
       <BoardListTemplate/>
-    </div>
+    </>
   );
 };
 

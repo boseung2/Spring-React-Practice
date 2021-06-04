@@ -1,9 +1,10 @@
 import './App.css';
 import { Route, Switch } from 'react-router';
 import BoardListPage from './pages/BoardListPage';
-import BoardPage from './pages/BoardPage';
+import BoardReadPage from './pages/BoardReadPage';
 import BoardRegisterPage from './pages/BoardRegisterPage';
 import Home from './pages/Home';
+import BoardModifyPage from './pages/BoardModifyPage';
 
 const App = () => {
   return (
@@ -11,8 +12,9 @@ const App = () => {
       <Route>
         <Route component={Home} path={'/'} exact />
         <Switch>
+          <Route component={BoardModifyPage} path={'/board/register/:bno'} />
           <Route component={BoardRegisterPage} path={'/board/register'} />
-          <Route component={BoardPage} path={'/board/:bno'} />
+          <Route component={BoardReadPage} path={'/board/:bno'} />
           <Route component={BoardListPage} path={'/board'} />
         </Switch>
       </Route>

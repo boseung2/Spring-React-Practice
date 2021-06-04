@@ -8,7 +8,7 @@ const BoardListTemplate = () => {
   return (
     <div>
       <Container maxWidth="lg">
-      <BoardTitle/>
+      <BoardTitle title="List"/>
       <BoardSearch/>
       <BoardTable/>
       </Container>

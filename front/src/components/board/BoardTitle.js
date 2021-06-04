@@ -8,15 +8,15 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const BoardTitle = () => {
+const BoardTitle = ({ title }) => {
 
   const classes = useStyles();
 
   return (
     <div>
       <Box display="flex" alignItems="center">
-      <h1>Board List Page</h1>
-      <Link to={'/board/register'}><Button variant="contained" color="secondary" className={classes.button}>REGISTER</Button></Link>
+        <h1>Board {title} Page</h1>
+        {title === "List" ? <Link to={'/board/register'}><Button variant="outlined" color="secondary" className={classes.button}>REGISTER</Button></Link> : ''}
       </Box>
     </div>
   );

@@ -2,13 +2,13 @@ import React from 'react';
 import Header from '../components/common/Header';
 import BoardRegisterTemplate from '../components/board/BoardRegisterTemplate';
 
-const BoardRegisterPage = () => {
+const BoardModifyPage = () => {
   return (
     <>
       <Header/>
-      <BoardRegisterTemplate title="Register"/>
+      <BoardRegisterTemplate title="Modify"/>
     </>
   );
 };
 
-export default BoardRegisterPage;
+export default BoardModifyPage;

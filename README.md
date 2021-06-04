@@ -11,11 +11,13 @@
 * 리스트 - /board
 * 조회 - /board/:bno
 * 등록 - /board/register
+* 수정 - /board/register/:bno
 
 ## Todo
 
 ### 21.06.04
 
-- [x] (Front) /board component 구성
-- [ ] (Front) /board/:bno component 설계 / 구성
-- [ ] (Front) /board/register component 설계 / 구성
+- [x] ~~(Front) /board -> BoardListPage component 구성~~
+- [x] ~~(Front) /board/:bno -> BoardReadPage component 구성~~
+- [x] ~~(Front) /board/register -> BoardRegisterPage component 구성~~
+- [x] ~~(Front) /board/register/:bno -> BoardModifyPage component 구성~~
