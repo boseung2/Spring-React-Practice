@@ -17,7 +17,8 @@
 
 ### 21.06.04
 
-- [x] ~~(Front) /board -> BoardListPage component 구성~~
-- [x] ~~(Front) /board/:bno -> BoardReadPage component 구성~~
-- [x] ~~(Front) /board/register -> BoardRegisterPage component 구성~~
-- [x] ~~(Front) /board/register/:bno -> BoardModifyPage component 구성~~
+- [x] (Front) /board -> BoardListPage component 구성
+- [x] (Front) /board/:bno -> BoardReadPage component 구성
+- [x] (Front) /board/register -> BoardRegisterPage component 구성
+- [x] (Front) /board/register/:bno -> BoardModifyPage component 구성
+- [ ] (Front) api 연동 및 Board 리스트 페이지 리덕스 적용
