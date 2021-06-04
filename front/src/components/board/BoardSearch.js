@@ -11,9 +11,9 @@ import {
 } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
-ButtonStyles : {
-  height : 40
-}
+  ButtonStyles : {
+    height : 40
+  }
 }));
 
 const BoardSearch = ({ age, handleChange }) => {
