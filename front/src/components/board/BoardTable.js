@@ -27,21 +27,21 @@ const StyledTableRow = withStyles((theme) => ({
   },
 }))(TableRow);
 
-function createData(bno, title, writer, regdate) {
-  return { bno, title, writer, regdate };
+function createData(bno, title, replyCount,  writer, regdate) {
+  return { bno, title, replyCount, writer, regdate };
 }
 
 const rows = [
-  createData(100, 'test title', 'test writer', '2020/01/01'),
-  createData(101, 'test title', 'test writer', '2020/01/01'),
-  createData(102, 'test title', 'test writer', '2020/01/01'),
-  createData(103, 'test title', 'test writer', '2020/01/01'),
-  createData(104, 'test title', 'test writer', '2020/01/01'),
-  createData(105, 'test title', 'test writer', '2020/01/01'),
-  createData(106, 'test title', 'test writer', '2020/01/01'),
-  createData(107, 'test title', 'test writer', '2020/01/01'),
-  createData(108, 'test title', 'test writer', '2020/01/01'),
-  createData(109, 'test title', 'test writer', '2020/01/01'),
+  createData(100, 'test title', 10,'test writer', '2020/01/01'),
+  createData(101, 'test title', 10,'test writer', '2020/01/01'),
+  createData(102, 'test title', 10,'test writer', '2020/01/01'),
+  createData(103, 'test title', 10,'test writer', '2020/01/01'),
+  createData(104, 'test title', 10,'test writer', '2020/01/01'),
+  createData(105, 'test title', 10,'test writer', '2020/01/01'),
+  createData(106, 'test title', 10,'test writer', '2020/01/01'),
+  createData(107, 'test title', 10, 'test writer', '2020/01/01'),
+  createData(108, 'test title', 10, 'test writer', '2020/01/01'),
+  createData(109, 'test title', 10, 'test writer', '2020/01/01'),
 ];
 
 const useStyles = makeStyles((theme) => ({
@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const BoardTable = () => {
+const BoardTable = ({ dtoList, totalPage, page, onClick }) => {
   const classes = useStyles();
 
   return (
@@ -80,7 +80,7 @@ const BoardTable = () => {
               <StyledTableCell component="th" scope="row">
                 {row.bno}
               </StyledTableCell>
-              <StyledTableCell>{row.title}</StyledTableCell>
+              <StyledTableCell>{row.title} [{row.replyCount}]</StyledTableCell>
               <StyledTableCell>{row.writer}</StyledTableCell>
               <StyledTableCell>{row.regdate}</StyledTableCell>
             </StyledTableRow>
@@ -88,9 +88,9 @@ const BoardTable = () => {
         </TableBody>
       </Table>
     </TableContainer>
-  <Pagination className={classes.paginationStyle} count={30}/>
+  <Pagination className={classes.paginationStyle} count={totalPage} page={page} onClick={onClick}/>
   </>
   );
-}
+};
 
 export default BoardTable;

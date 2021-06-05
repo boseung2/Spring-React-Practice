@@ -12,7 +12,7 @@ import org.zerock.springreactpractice.dto.PageResultDTO;
 import org.zerock.springreactpractice.service.BoardService;
 
 @RestController
-@RequestMapping("/api/board/")
+@RequestMapping("/api/board")
 @Log4j2
 @RequiredArgsConstructor
 public class BoardController {
