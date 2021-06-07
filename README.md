@@ -22,3 +22,8 @@
 - [x] (Front) /board/register -> BoardRegisterPage component 구성
 - [x] (Front) /board/register/:bno -> BoardModifyPage component 구성
 - [ ] (Front) api 연동 및 Board 리스트 페이지 리덕스 적용
+
+### 21.06.05
+
+- [ ] (Front) modules/board 리덕스 초기 설정 / 리덕스 공부
+- [ ] (Back) jpql이용해 board 검색기능 추가
