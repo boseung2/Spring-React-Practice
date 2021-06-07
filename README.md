@@ -17,13 +17,18 @@
 
 ### 21.06.04
 
-- [x] (Front) /board -> BoardListPage component 구성
-- [x] (Front) /board/:bno -> BoardReadPage component 구성
-- [x] (Front) /board/register -> BoardRegisterPage component 구성
-- [x] (Front) /board/register/:bno -> BoardModifyPage component 구성
-- [ ] (Front) api 연동 및 Board 리스트 페이지 리덕스 적용
+- [x] (Frontend) /board -> BoardListPage component 구성
+- [x] (Frontend) /board/:bno -> BoardReadPage component 구성
+- [x] (Frontend) /board/register -> BoardRegisterPage component 구성
+- [x] (Frontend) /board/register/:bno -> BoardModifyPage component 구성
+- [ ] ~~(Frontend) api 연동 및 Board 리스트 페이지 리덕스 적용~~
 
 ### 21.06.05
 
-- [ ] (Front) modules/board 리덕스 초기 설정 / 리덕스 공부
-- [ ] (Back) jpql이용해 board 검색기능 추가
+- [x] (Frontend) modules/board 리덕스 초기 설정 / 리덕스 공부
+- [ ] ~~(Backend) jpql이용해 board 검색기능 추가~~
+
+### 21.06.07
+
+- [x] (Backend) jpql이용해 board 검색기능 추가
+- [ ] (Backend) Board 코드 흐름도 그리기 
