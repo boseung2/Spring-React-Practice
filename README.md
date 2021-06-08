@@ -41,4 +41,4 @@
 
 ### 21.06.08
 
-- [ ] (Backend) Reply url 정하고 crud 시작
+- [x] (Backend) Reply url 정하고 api 구성하기
