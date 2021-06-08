@@ -23,7 +23,7 @@ public class BoardRepositoryTests {
     private BoardRepository boardRepository;
 
     @Test
-    public void insertboard() {
+    public void insertBoard() {
 
         IntStream.rangeClosed(1, 100).forEach(i -> {
             Member member = Member.builder().email("user" + i + "@aaa.com").build();
@@ -50,6 +50,8 @@ public class BoardRepositoryTests {
         System.out.println(board.getWriter());
 
     }
+
+    /*
 
     @Test
     public void testReadWithWriter() {
@@ -90,6 +92,8 @@ public class BoardRepositoryTests {
         });
 
     }
+
+     */
 
     @Test
     public void testRead3() {

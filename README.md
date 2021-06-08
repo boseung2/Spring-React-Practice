@@ -1,11 +1,17 @@
 # Spring-React-Practice
 
 ### (Backend) Board url
-* 리스트 - (GET) /api/board/
-* 등록 - (POST) /api/board/
+* 리스트 - (GET) /api/board
+* 등록 - (POST) /api/board
 * 조회 - (GET) /api/board/{bno}
 * 삭제 - (DELETE) /api/board/{bno}
 * 수정 - (PUT) /api/board/{bno}
+
+### (Backend) Reply url
+* 리스트 - (GET) /api/reply/{bno}
+* 등록 - (POST) /api/reply
+* 삭제 - (DELETE) /api/reply/{rno}
+* 수정 - (PUT) /api/reply/{rno}
 
 ### (Frontend) Board url
 * 리스트 - /board
@@ -31,4 +37,8 @@
 ### 21.06.07
 
 - [x] (Backend) jpql이용해 board 검색기능 추가
-- [ ] (Backend) Board 코드 흐름도 그리기 
+- [x] (Backend) Board 코드 흐름도 그리기 
+
+### 21.06.08
+
+- [ ] (Backend) Reply url 정하고 crud 시작

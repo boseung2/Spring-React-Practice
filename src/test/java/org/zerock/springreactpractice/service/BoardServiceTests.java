@@ -24,6 +24,8 @@ public class BoardServiceTests {
 
         Long bno = boardService.register(dto);
 
+        System.out.println("BNO : " + bno);
+
     }
 
     @Test
