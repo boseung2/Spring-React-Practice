@@ -42,3 +42,8 @@
 ### 21.06.08
 
 - [x] (Backend) Reply url 정하고 api 구성하기
+
+### 21.06.09
+
+- [ ] (Backend) Reply api 테스트
+- [ ] (Backend) Movie api 구성하기
