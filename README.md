@@ -19,8 +19,6 @@
 * 리스트 - (GET) /api/movie
 * 등록 - (POST) /api/movie
 * 조회 - (GET) /api/movie/{mno}
-* 삭제 - (DELETE) /api/movie/{mno}
-* 수정 - (PUT) /api/movie/{mno}
 
 ### (Backend) Review url
 * 리스트 - (GET) /api/review/{mno}

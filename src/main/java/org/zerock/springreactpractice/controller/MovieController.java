@@ -12,8 +12,6 @@ import org.zerock.springreactpractice.dto.PageRequestDTO;
 import org.zerock.springreactpractice.dto.PageResultDTO;
 import org.zerock.springreactpractice.service.MovieService;
 
-import javax.xml.ws.Response;
-
 @RestController
 @RequestMapping("/api/movie")
 @Log4j2
