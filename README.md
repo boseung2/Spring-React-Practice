@@ -45,5 +45,10 @@
 
 ### 21.06.09
 
+- [x] (Backend) Movie api 구성하기
+- [ ] ~~(Backend) Reply api 테스트~~
+
+### 21.06.10
+
+- [ ] (Backend) MovieImage 파일 업로드 처리
 - [ ] (Backend) Reply api 테스트
-- [ ] (Backend) Movie api 구성하기
