@@ -29,7 +29,7 @@ public class BoardController {
 
     }
 
-    @PostMapping(value = "")
+    @PostMapping(value = "", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Long> register(@RequestBody BoardDTO dto) {
 
         log.info("-----register-----");

@@ -13,6 +13,23 @@
 * 삭제 - (DELETE) /api/reply/{rno}
 * 수정 - (PUT) /api/reply/{rno}
 
+---
+
+### (Backend) Movie url
+* 리스트 - (GET) /api/movie
+* 등록 - (POST) /api/movie
+* 조회 - (GET) /api/movie/{mno}
+* 삭제 - (DELETE) /api/movie/{mno}
+* 수정 - (PUT) /api/movie/{mno}
+
+### (Backend) Review url
+* 리스트 - (GET) /api/review/{mno}
+* 등록 - (POST) /api/review
+* 삭제 - (DELETE) /api/review/{reviewnum}
+* 수정 - (PUT) /api/review/{reviewnum}
+
+---
+
 ### (Frontend) Board url
 * 리스트 - /board
 * 조회 - /board/:bno
@@ -45,10 +62,12 @@
 
 ### 21.06.09
 
-- [x] (Backend) Movie api 구성하기
+- [x] (Backend) Movie, Review, Member2 repository 구성하기
 - [ ] ~~(Backend) Reply api 테스트~~
 
 ### 21.06.10
 
-- [ ] (Backend) MovieImage 파일 업로드 처리
+- [x] (Backend) MovieImage 파일 업로드 처리
+- [ ] (Backend) Movie api 구성
+- [ ] (Backend) Review api 구성
 - [ ] (Backend) Reply api 테스트
