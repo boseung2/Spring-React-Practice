@@ -18,7 +18,10 @@
 ### (Backend) Movie url
 * 리스트 - (GET) /api/movie
 * 등록 - (POST) /api/movie
-* 조회 - (GET) /api/movie/{mno}
+* 조회 - (GET) /api/movie/{mno}   
+  (추가예정)
+* 삭제 - (DELETE) /api/movie/{mno}
+* 수정 - (PUT) /api/movie/{mno}
 
 ### (Backend) Review url
 * 리스트 - (GET) /api/review/{mno}
@@ -66,6 +69,8 @@
 ### 21.06.10
 
 - [x] (Backend) MovieImage 파일 업로드 처리
-- [ ] (Backend) Movie api 구성
-- [ ] (Backend) Review api 구성
+- [x] (Backend) Movie api 구성
+- [x] (Backend) Review api 구성
 - [ ] (Backend) Reply api 테스트
+- [ ] (Backend) Movie api 테스트
+- [ ] (Backend) Review api 테스트
