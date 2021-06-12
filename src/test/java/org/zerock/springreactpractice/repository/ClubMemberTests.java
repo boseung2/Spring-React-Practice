@@ -23,4 +23,5 @@ public class ClubMemberTests {
         System.out.println(clubMember);
 
     }
+
 }
