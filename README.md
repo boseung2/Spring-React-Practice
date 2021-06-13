@@ -71,6 +71,22 @@
 - [x] (Backend) MovieImage 파일 업로드 처리
 - [x] (Backend) Movie api 구성
 - [x] (Backend) Review api 구성
-- [ ] (Backend) Reply api 테스트
-- [ ] (Backend) Movie api 테스트
-- [ ] (Backend) Review api 테스트
+- [ ] ~~(Backend) Reply api 테스트~~
+- [ ] ~~(Backend) Movie api 테스트~~
+- [ ] ~~(Backend) Review api 테스트~~
+
+### 21.06.11
+
+- [x] (Backend) Note Api 구성
+- [x] (Backend) Spring Security 추가
+
+### 21.06.12
+
+- [x] (Backend) Google Social Login 추가
+
+### 21.06.13
+
+- [x] (Backend) JWT Token 추가
+- [ ] (Backend) member 테이블 하나로 통합해서 다시 설계
+- [ ] (Backend) 모든 api 테스트 코드 추가 (repository, service, controller)
+- [ ] (Backend) api 사용법 README 정리
