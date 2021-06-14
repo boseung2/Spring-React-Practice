@@ -37,7 +37,7 @@
 * 등록 - /board/register
 * 수정 - /board/register/:bno
 
-## Todo
+## TODO (21.06.04 ~)
 
 ### 21.06.04
 
@@ -87,6 +87,14 @@
 ### 21.06.13
 
 - [x] (Backend) JWT Token 추가
-- [ ] (Backend) member 테이블 하나로 통합해서 다시 설계
-- [ ] (Backend) 모든 api 테스트 코드 추가 (repository, service, controller)
-- [ ] (Backend) api 사용법 README 정리
+
+## TODO (21.06.14 ~)
+
+1. (Backend) 회원 테이블들을 club_member 테이블 하나로 관계맺기
+2. (Backend) 모든 api 테스트 코드 추가 (repository, service, controller) + 자동화
+3. (Backend) 유효성검사, 예외처리 코드 추가
+4. (Backend) API 사용법 README 정리
+
+### 21.06.14
+
+- [ ] (Backend) member 테이블 설계 해서 통합
