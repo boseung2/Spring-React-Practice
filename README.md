@@ -97,4 +97,8 @@
 
 ### 21.06.14
 
-- [ ] (Backend) member 테이블 설계 해서 통합
+- [x] (Backend) member 테이블 설계 해서 통합
+
+### 21.06.16
+
+- [ ] (Backend) member-note 기능 리팩토링(자동화된 테스트 코드 추가, 유효성검사 추가, 예외처리 추가, API 사용법 README 추가)

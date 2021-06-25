@@ -6,7 +6,7 @@ plugins {
     id 'com.ewerk.gradle.plugins.querydsl' version '1.0.10'
 }
 
-group = 'org.zerock'
+group = 'com.springreactpractice'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
@@ -43,9 +43,6 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
     // https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt
     implementation group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
-
-
-
 
 }
 
