@@ -51,5 +51,6 @@
   },
   "devDependencies": {
     "@material-ui/styles": "^4.11.4"
-  }
+  },
+  "proxy" : "http://localhost:80/"
 }

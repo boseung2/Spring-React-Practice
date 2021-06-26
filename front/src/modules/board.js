@@ -2,7 +2,6 @@ import { createAction, handleActions } from 'redux-actions';
 import createRequestSaga, { createRequestActionTypes } from '../lib/createRequestSaga';
 import * as boardAPI from '../lib/api/board';
 import { takeLatest } from '@redux-saga/core/effects';
-import produce from 'immer';
 
 const CHANGE_FIELD = "board/CHANGE_FIELD";
 const INITIALIZE_FORM = "board/INITIALIZE_FORM";

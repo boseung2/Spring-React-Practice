@@ -5,6 +5,7 @@ import com.springreactpractice.entity.MemberRole;
 import com.springreactpractice.repository.MemberRepository;
 import com.springreactpractice.security.dto.AuthMemberDTO;
 import com.springreactpractice.security.dto.SignUpRequest;
+import com.springreactpractice.security.dto.SignUpResponse;
 import exception.BadRequestException;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
@@ -36,10 +37,10 @@ public class AuthController {
     MemberRepository memberRepository;
 
     @PostMapping(value = "/register", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> registerUser(@Valid @RequestBody SignUpRequest signUpRequest) {
+    public ResponseEntity<SignUpResponse> registerUser(@Valid @RequestBody SignUpRequest signUpRequest) {
 
         if(memberRepository.existsByEmail(signUpRequest.getEmail())) {
-            return new ResponseEntity<>("email already in use", HttpStatus.BAD_REQUEST);
+            throw new BadRequestException("email already in use");
         }
 
         // Creating user's account
@@ -54,7 +55,11 @@ public class AuthController {
 
         Member result = memberRepository.save(member);
 
-        return new ResponseEntity<>("success", HttpStatus.OK);
+        SignUpResponse signUpResponse = SignUpResponse.builder()
+                                            .email(result.getEmail())
+                                            .name(result.getName()).build();
+
+        return new ResponseEntity<>(signUpResponse, HttpStatus.OK);
 
     }
 
