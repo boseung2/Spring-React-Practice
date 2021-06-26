@@ -1,6 +1,6 @@
 package com.springreactpractice.security.handler;
 
-import com.springreactpractice.security.dto.ClubAuthMemberDTO;
+import com.springreactpractice.security.dto.AuthMemberDTO;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -30,7 +30,7 @@ public class ClubLoginSuccessHandler implements AuthenticationSuccessHandler {
         log.info("------");
         log.info("onAuthenticationSuccess");
 
-        ClubAuthMemberDTO authMember = (ClubAuthMemberDTO) authentication.getPrincipal();
+        AuthMemberDTO authMember = (AuthMemberDTO) authentication.getPrincipal();
 
         boolean fromSocial = authMember.isFromSocial();
 

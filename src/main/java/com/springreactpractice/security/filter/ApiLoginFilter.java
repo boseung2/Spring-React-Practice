@@ -1,11 +1,14 @@
 package com.springreactpractice.security.filter;
 
 import lombok.extern.log4j.Log4j2;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter;
-import com.springreactpractice.security.dto.ClubAuthMemberDTO;
+import com.springreactpractice.security.dto.AuthMemberDTO;
 import com.springreactpractice.util.JWTUtil;
 
 import javax.servlet.FilterChain;
@@ -13,6 +16,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.stream.Collectors;
 
 @Log4j2
 public class ApiLoginFilter extends AbstractAuthenticationProcessingFilter {
@@ -30,8 +34,24 @@ public class ApiLoginFilter extends AbstractAuthenticationProcessingFilter {
         log.info("--------------ApiLoginFilter-------------");
         log.info("attemptAuthentication");
 
-        String email = request.getParameter("email");
-        String pw = request.getParameter("pw");
+        String requestData = request.getReader().lines().collect(Collectors.joining());
+
+        JSONParser parser = new JSONParser();
+        Object obj = null;
+        try {
+            obj = parser.parse( requestData );
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        JSONObject jsonObj = (JSONObject) obj;
+
+        String email = (String) jsonObj.get("email");
+        String pw = (String) jsonObj.get("pw");
+
+        log.info("data : " + requestData);
+
+        //String email = request.getParameter("email");
+        //String pw = request.getParameter("pw");
 
         UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(email, pw);
 
@@ -45,7 +65,7 @@ public class ApiLoginFilter extends AbstractAuthenticationProcessingFilter {
         log.info(authResult.getPrincipal());
 
         //email address
-        String email = ((ClubAuthMemberDTO)authResult.getPrincipal()).getUsername();
+        String email = ((AuthMemberDTO)authResult.getPrincipal()).getUsername();
 
         String token = null;
 

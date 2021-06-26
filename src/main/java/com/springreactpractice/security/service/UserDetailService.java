@@ -1,7 +1,7 @@
 package com.springreactpractice.security.service;
 
 import com.springreactpractice.entity.Member;
-import com.springreactpractice.security.dto.ClubAuthMemberDTO;
+import com.springreactpractice.security.dto.AuthMemberDTO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -17,14 +17,14 @@ import java.util.stream.Collectors;
 @Log4j2
 @Service
 @RequiredArgsConstructor
-public class ClubUserDetailService implements UserDetailsService {
+public class UserDetailService implements UserDetailsService {
 
     private final MemberRepository memberRepository;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-        log.info("ClubUserDetailService loadUserByUsername " + username);
+        log.info("UserDetailService loadUserByUsername " + username);
 
         Optional<Member> result = memberRepository.findByEmail(username, false);
 
@@ -37,7 +37,7 @@ public class ClubUserDetailService implements UserDetailsService {
         log.info("-----------");
         log.info(member);
 
-        ClubAuthMemberDTO clubAuthMember = new ClubAuthMemberDTO(
+        AuthMemberDTO authMember = new AuthMemberDTO(
                 member.getEmail(),
                 member.getPassword(),
                 member.isFromSocial(),
@@ -45,10 +45,10 @@ public class ClubUserDetailService implements UserDetailsService {
                 .map(role -> new SimpleGrantedAuthority("ROLE_" + role.name())).collect(Collectors.toList())
         );
 
-        clubAuthMember.setName(member.getName());
-        clubAuthMember.setFromSocial(member.isFromSocial());
+        authMember.setName(member.getName());
+        authMember.setFromSocial(member.isFromSocial());
 
-        return clubAuthMember;
+        return authMember;
 
     }
 

@@ -13,7 +13,7 @@ import java.util.Date;
 @Log4j2
 public class JWTUtil {
 
-    private String secretKey = "zerock12345678";
+    private String secretKey = "boseung12345678";
 
     private long expire = 60 * 24 * 30;
 
