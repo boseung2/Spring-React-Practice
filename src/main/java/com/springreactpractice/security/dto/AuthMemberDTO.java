@@ -3,7 +3,6 @@ package com.springreactpractice.security.dto;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import lombok.extern.log4j.Log4j;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;
@@ -16,7 +15,7 @@ import java.util.Map;
 @Getter
 @Setter
 @ToString
-public class ClubAuthMemberDTO extends User implements OAuth2User {
+public class AuthMemberDTO extends User implements OAuth2User {
 
     private String email;
 
@@ -26,13 +25,13 @@ public class ClubAuthMemberDTO extends User implements OAuth2User {
 
     private Map<String, Object> attr;
 
-    public ClubAuthMemberDTO(String username, String password, boolean fromSocial, Collection<? extends GrantedAuthority> authorities) {
+    public AuthMemberDTO(String username, String password, boolean fromSocial, Collection<? extends GrantedAuthority> authorities) {
         super(username, password, authorities);
         this.email = username;
         this.fromSocial=fromSocial;
     }
 
-    public ClubAuthMemberDTO(String username, String password, boolean fromSocial, Collection<? extends GrantedAuthority> authorities, Map<String, Object> attr) {
+    public AuthMemberDTO(String username, String password, boolean fromSocial, Collection<? extends GrantedAuthority> authorities, Map<String, Object> attr) {
         this(username, password, fromSocial, authorities);
         this.attr = attr;
     }

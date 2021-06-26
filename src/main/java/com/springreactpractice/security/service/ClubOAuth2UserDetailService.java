@@ -1,7 +1,7 @@
 package com.springreactpractice.security.service;
 
 import com.springreactpractice.entity.Member;
-import com.springreactpractice.security.dto.ClubAuthMemberDTO;
+import com.springreactpractice.security.dto.AuthMemberDTO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -57,7 +57,7 @@ public class ClubOAuth2UserDetailService extends DefaultOAuth2UserService {
 
         Member member = saveSocialMember(email);
 
-        ClubAuthMemberDTO clubAuthMember = new ClubAuthMemberDTO(
+        AuthMemberDTO clubAuthMember = new AuthMemberDTO(
                 member.getEmail(),
                 member.getPassword(),
                 true,

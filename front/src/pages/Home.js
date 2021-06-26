@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@material-ui/core';
 import { styled } from '@material-ui/styles';
+import Header from "../components/common/Header";
 
 const StyledButton = styled(Button)({
   background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
@@ -18,6 +19,7 @@ const Home = () => {
 
   return (
     <div>
+      <Header/>
       <Link to={'/board'}>
         <StyledButton variant="contained">Board</StyledButton>
       </Link>

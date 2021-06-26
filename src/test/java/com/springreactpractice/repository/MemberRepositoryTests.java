@@ -11,6 +11,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Optional;
+import java.util.stream.IntStream;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -23,6 +24,8 @@ public class MemberRepositoryTests {
     private PasswordEncoder passwordEncoder;
 
     private Member sampleMember;
+
+
 
     /*
 
@@ -50,7 +53,7 @@ public class MemberRepositoryTests {
 
     };
 
-     */
+    */
 
     /*
     repository test 순서?

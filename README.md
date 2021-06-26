@@ -1,5 +1,9 @@
 # Spring-React-Practice
 
+### (Backend) Auth
+* (POST) /api/auth/register
+* (POST) /api/auth/login
+
 ### (Backend) Board url
 * 리스트 - (GET) /api/board
 * 등록 - (POST) /api/board

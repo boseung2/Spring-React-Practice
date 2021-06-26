@@ -34,7 +34,11 @@ public class ApiCheckFilter extends OncePerRequestFilter {
 
         log.info(antPathMatcher.match(pattern, request.getRequestURI()));
 
-        if(antPathMatcher.match(pattern, request.getRequestURI())) {
+        if(antPathMatcher.match("/api/auth/**", request.getRequestURI())) {
+            filterChain.doFilter(request, response);
+            return;
+        }
+        else if(antPathMatcher.match(pattern, request.getRequestURI())) {
             log.info("ApiCheckFilter....");
             log.info("ApiCheckFilter....");
             log.info("ApiCheckFilter....");
