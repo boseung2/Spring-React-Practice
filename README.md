@@ -1,8 +1,31 @@
 # Spring-React-Practice
 
-### (Backend) Auth
-* (POST) /api/auth/register
-* (POST) /api/auth/login
+## API Reference
+
+### AUTH
+
+#### 로그인
+
+```http
+  POST /api/login
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `email` | `string` | **Required**. 이메일 |
+| `pw` | `string` | **Required**. 비밀번호 |
+
+#### 회원가입
+
+```http
+  POST /api/auth/register
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `name`      | `string` | **Required**. 이름 |
+| `email`      | `string` | **Required**. 이메일 |
+| `password`      | `string` | **Required**. 비밀번호 |
 
 ### (Backend) Board url
 * 리스트 - (GET) /api/board

@@ -7,6 +7,7 @@ import com.springreactpractice.security.dto.AuthMemberDTO;
 import com.springreactpractice.security.dto.SignUpRequest;
 import com.springreactpractice.security.dto.SignUpResponse;
 import exception.BadRequestException;
+import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -36,6 +37,7 @@ public class AuthController {
     @Autowired
     MemberRepository memberRepository;
 
+    @ApiOperation(value = "사용자 생성", notes = "신규 사용자를 생성합니다.")
     @PostMapping(value = "/register", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<SignUpResponse> registerUser(@Valid @RequestBody SignUpRequest signUpRequest) {
 

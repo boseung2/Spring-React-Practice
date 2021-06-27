@@ -1,5 +1,6 @@
 package com.springreactpractice.security.dto;
 
+import io.swagger.annotations.ApiParam;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,6 +12,7 @@ import javax.validation.constraints.NotBlank;
 @Data
 public class SignUpRequest {
 
+    @ApiParam(value = "사용자 이름", required = false, example = "홍길동")
     @NotBlank
     private String name;
 
